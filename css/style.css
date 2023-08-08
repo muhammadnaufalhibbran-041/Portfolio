@@ -1,0 +1,191 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Martel+Sans&display=swap');
+
+/* Global */
+html, body {
+    overflow-x: hidden;
+    max-width: 100%;
+}
+
+body {
+    font-family: 'Martel Sans', sans-serif;
+    background-color: white;
+}
+
+body hr {
+    border: 0;
+    height: 30px;
+    border-style: solid;
+    border-color: #aca6a6;
+    border-width: 5px 0 0 0;
+    border-radius: 20px;
+}
+
+body hr::before {
+    display: block;
+    content: "";
+    height: 30px;
+    margin-top: -30px;
+    border-style: solid;
+    border-color: #aca6a6;
+    border-width: 5px 0 0 0;
+    border-radius: 20px;
+}
+
+/* Navbar */
+.navbar {
+    background: transparent;
+    transition: background-color 0.5s;
+}
+
+.navbar ul li {
+    margin-left: 10px;
+}
+
+.navbar ul li a {
+    font-size: 1.2em;
+    color: black;
+}
+
+.navbar a.nav-link.active {
+    color: rgb(58, 52, 207);
+    font-weight: bold;
+}
+
+.scrolled {
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
+
+/* Jumbotron */
+.jumbotron {
+    height: 100vh;
+}
+
+.jumbotron .row {
+    width: 60%;
+}
+
+/* About */
+.about {
+    background-image: linear-gradient(to left, rgb(9, 7, 74), rgb(58, 52, 207));
+    color: white;
+    padding: 120px 0;
+    border-radius: 20px;
+}
+
+.about img {
+    border-radius: 50%;
+    animation: bounce 1s linear infinite forwards alternate-reverse;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    width: 350px;
+    height: 350px;
+}
+
+@keyframes bounce {
+    0% { transform: translateY(0) }
+    100% { transform: translateY(-20px) }
+}
+
+/* Project */
+.project {
+    padding: 120px 0;
+}
+
+.project .card, img {
+    border-radius: 20px;
+}
+
+.project .top-component {
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.27);
+    opacity: 0;
+    transition: .3s all;
+}
+
+.project .top-component:hover {
+    opacity: 1;
+}
+
+.project .top-component h5 {
+    transform: translateY(100px);
+    transition: .3s all;
+}
+
+.project .top-component:hover h5 {
+    transform: translateY(0);
+}
+
+.project h5 {
+    background-color: rgb(255, 255, 255);
+    border-radius: 7px;
+}
+
+/* Certificate */
+.certificate {
+    background-image: linear-gradient(to left, rgb(9, 7, 74), rgb(58, 52, 207));
+    color: white;
+    padding: 120px 0;
+    border-radius: 20px;
+}
+
+.certificate .card, img {
+    border-radius: 20px;
+}
+
+.certificate .card img {
+    transition: .3s all;
+}
+
+.certificate .card img:hover {
+    transform: scale(.9);
+}
+
+.contact {
+    padding: 120px 0;
+}
+
+/* Footer */
+footer {
+    background-image: linear-gradient(to left, rgb(9, 7, 74), rgb(58, 52, 207));
+    color: white;
+}
+
+/* Responsive */
+/* Mobile */
+@media (max-width: 576px) {
+
+    .navbar {
+        background-color: white;
+    }
+
+    .jumbotron {
+        height: 50vh;
+    }
+
+    .jumbotron .row {
+        width: 90%;
+    }
+
+    .about img {
+        width: 250px;
+        height: 250px;
+    }
+
+    footer {
+        padding: 0 40px;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 992px) {
+
+    .jumbotron {
+        height: 70vh;
+    }
+
+    .about img {
+        width: 350px;
+        height: 350px;
+    }
+}
+
